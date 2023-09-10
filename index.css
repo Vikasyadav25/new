@@ -1,0 +1,236 @@
+* {
+  padding: 0;
+  margin: 0;
+  /* height: 110vh; */
+}
+/* body */
+body {
+  overflow: hidden;
+  /* Hide scrollbars */
+}
+section {
+  margin-top: 30px;
+  /* background-image: url("https://images.unsplash.com/photo-1549675584-c22bde15df72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YWxhcm0lMjBjbG9ja3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"); */
+  background-size: cover;
+  /* background-color: #edf0f5; */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  position: relative;
+  bottom: 700px;
+  left: -85px;
+}
+/* Clock watch */
+.clock-watch {
+    margin-left: 40px;
+  width: 90vw;
+  height: 100vh;
+  /* background-color: #edf0f5; */
+  /* border-radius: 30%; */
+}
+/*page-title*/
+
+.title {
+  color: black;
+  font-family: "Roboto";
+  position: relative;
+  left: 90px;
+
+  /* justify-content: center; */
+  /* top: 50px; */
+  /* text-align: center; */
+  z-index: 1;
+  /* left: 50%; */
+  font-size: 1.2rem;
+  transform: translateX(-50%);
+}
+/* container for the whole alarm clock */
+.container {
+  border: 5px solid black;
+  border-radius: 20px;
+  width: 40%;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#setAlarm-list {
+  width: 500px;
+  height: 110px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+  max-height: 300px;
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+#setAlarm-list::-webkit-scrollbar {
+  width: 9px;
+}
+/* for the current time displayed */
+.current-time-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  font-size: 2.5rem;
+  margin-top: 70px;
+  margin-bottom: 30px;
+  color: black;
+}
+
+/* for setAlarm */
+.setAlarm {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: black;
+}
+.setAlarm-left input {
+  background-color: transparent;
+  font-size: 1.5rem;
+  border: none;
+  color: black;
+  border: 2px solid black;
+  padding: 5px;
+  width: 60px;
+}
+.setAlarm-left select {
+  font-size: 1.5rem;
+  border: none;
+  background-color: transparent;
+  border: 2px solid black;
+  color: grey;
+  padding: 5px;
+  width: 80px;
+}
+.setAlarm-left input:focus {
+  border-color: grey;
+  color: black;
+  border: 3px solid grey;
+}
+/* css for the alramlist */
+.alarm-heading {
+  color: black;
+  margin-bottom: 40px;
+  margin-left: 55px;
+}
+.setAlarm-right button {
+  font-size: 1.4rem;
+  padding: 5px;
+  width: 100px;
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.358);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.setAlarm-right button:hover {
+  background-color: grey;
+  color: black;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.setAlarm-delete {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 90%;
+}
+.setAlarm-delete-left {
+  font-size: 1.5rem;
+  margin-left: 90px;
+}
+.parent {
+  display: flex;
+  justify-content: space-between;
+}
+.current-time-alarm-left {
+  color: black;
+}
+.current-time-alarm {
+  font-size: 1.5rem;
+}
+.current-time-alarm-right button {
+  font-size: 1.1rem;
+  padding: 3px;
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.242);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.current-time-alarm-right button:hover {
+  background-color: grey;
+  color: black;
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* media queries for reasponsive */
+@media screen and (max-width: 1024px) {
+  .page-title {
+    top: 70px;
+    font-size: 0.8rem;
+  }
+  .container,
+  .current-time-container {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 748px) {
+  .container,
+  .current-time-container {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container,
+  .current-time-container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 486px) {
+  .container,
+  .current-time-container {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 452px) {
+  .setAlarm {
+    flex-direction: column;
+  }
+  .setAlarm-left {
+    margin: auto;
+  }
+  .setAlarm-right {
+    margin: auto;
+  }
+}
+@media screen and (max-width: 347px) {
+  .page-title {
+    font-size: 0.5rem;
+  }
+  .setAlarm-left input {
+    font-size: 1.5rem;
+    padding: 5px;
+    width: 40px;
+  }
+  .setAlarm-left select {
+    font-size: 1.5rem;
+    border: none;
+    background-color: transparent;
+    border: 2px solid black;
+    color: grey;
+    padding: 5px;
+    width: 80px;
+  }
+}
